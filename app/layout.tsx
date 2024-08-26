@@ -12,10 +12,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "EventEasy - Reserva de eventos",
-  description: "Ainda pensando na descrição.",
-  icons: {
-    icon: "/assets/images/logo.svg",
-  },
+  description: "Ainda pensando na descrição."
 };
 
 export default function RootLayout({
