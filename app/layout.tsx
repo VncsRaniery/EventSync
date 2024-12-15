@@ -1,33 +1,23 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
-
-import "./globals.css";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-});
-
-export const metadata: Metadata = {
-  title: "EventEasy - Reserva de eventos",
-  description: "Ainda pensando na descrição."
-};
+import Providers from "@/components/providers/providers";
+import { Toaster } from "@/components/ui/sonner";
+import "@/styles/globals.css";
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <ClerkProvider>
-    <html lang="pt-BR" suppressHydrationWarning>
-      <head />
-      <body className={poppins.variable}>
-          {children}
-      </body>
-    </html>
-  </ClerkProvider>
-  );
-}
+    return (
+        <html lang="en" className="scrollbar">
+            <body
+                className=
+                    "min-h-screen bg-background text-foreground antialiased !font-default overflow-x-hidden"
+            >
+                <Providers>
+                    <Toaster richColors theme="dark" position="top-right" />
+                    {children}
+                </Providers>
+            </body>
+        </html>
+    );
+};

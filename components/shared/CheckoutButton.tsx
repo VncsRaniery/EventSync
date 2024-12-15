@@ -3,8 +3,8 @@
 import { IEvent } from '@/lib/database/models/event.model'
 import { SignedIn, SignedOut, SignInButton, useUser } from '@clerk/nextjs'
 import React from 'react'
-import { Button } from '../ui/button'
-import Checkout from './Checkout'
+import { Button } from '@/components/ui/button'
+import Checkout from '@/components/shared/Checkout'
 
 const CheckoutButton = ({ event }: { event: IEvent }) => {
   const { user } = useUser();
@@ -19,7 +19,7 @@ const CheckoutButton = ({ event }: { event: IEvent }) => {
         <>
           <SignedOut>
             <SignInButton>
-              <Button className="button rounded-full" size="lg">
+              <Button className="rounded-full h-[54px] text-[16px] font-normal leading-[24px]" size="lg">
                 Obter ingressos
               </Button>
             </SignInButton>

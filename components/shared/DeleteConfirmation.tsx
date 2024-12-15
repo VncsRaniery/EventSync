@@ -16,7 +16,7 @@ import {
 } from '@/components/ui/alert-dialog'
 
 import { deleteEvent } from '@/lib/actions/event.actions'
-import { Trash } from '@phosphor-icons/react'
+import { Trash2 } from 'lucide-react'
 
 export const DeleteConfirmation = ({ eventId }: { eventId: string }) => {
   const pathname = usePathname()
@@ -25,7 +25,7 @@ export const DeleteConfirmation = ({ eventId }: { eventId: string }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger>
-        <Trash size={20} fill="#FF5050" />
+        <Trash2 size={20} stroke="#FF5050" />
       </AlertDialogTrigger>
 
       <AlertDialogContent className="bg-white">
