@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import {
+  Ticket,
   House,
   Plus,
   HandCoins,
-  Frame,
-  Map,
-  PieChart,
-  Ticket,
+  SearchSlash,
+  GlobeLock,
+  Handshake,
 } from "lucide-react"
 
 import { NavMain } from "@/components/dashboard/NavMain"
@@ -44,19 +44,19 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "Sobre nós",
       url: "#",
-      icon: Frame,
+      icon: SearchSlash,
     },
     {
-      name: "Sales & Marketing",
+      name: "Políticas de Privacidade",
       url: "#",
-      icon: PieChart,
+      icon: GlobeLock,
     },
     {
-      name: "Travel",
+      name: "Termos & Condições",
       url: "#",
-      icon: Map,
+      icon: Handshake,
     },
   ],
 }
