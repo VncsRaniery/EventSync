@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="start">
+  EventSync - Sistema de Reserva de Eventos
+</h1>
 
-## Getting Started
+<img width="1280" alt="EventSync Thumbnail" src="/public/assets/EventSync.png">
 
-First, run the development server:
+## Introdução
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**EventSync** é uma plataforma moderna e responsiva para a reserva e gerenciamento de eventos. Este projeto utiliza algumas stacks de tecnologias que garantem desempenho, segurança e uma experiência de usuário intuitiva.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Destaques do projeto: 
+- **Estilo elegante e responsivo** com TailwindCSS e UI Shadcn.  
+- **Autenticação segura** e fácil de integrar com Clerk.  
+- **Checkout de tickets** com integração à API Stripe.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologias utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **[Next.js](https://nextjs.org/):** Framework React para SSR, rotas dinâmicas e otimização de desempenho.
+- **[TailwindCSS](https://tailwindcss.com/):** CSS utilitário para estilização rápida e responsiva.
+- **[Shadcn UI](https://ui.shadcn.dev/):** Conjunto de componentes acessíveis e personalizáveis.
+- **[Clerk](https://clerk.dev/):** Gerenciamento de autenticação e usuários de forma simples e segura.
+- **[Stripe API](https://stripe.com/docs):** Processamento de pagamentos e gerenciamento de tickets.
+- **[Uploadthing](https://uploadthing.com/):** Upload seguro de arquivos.
+- **[MongoDB](https://www.mongodb.com/):** Banco de dados escalável e flexível para armazenamento de dados.
 
-## Learn More
+## Início rápido
 
-To learn more about Next.js, take a look at the following resources:
+### Pré-requisitos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Certifique-se de ter instalado
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js
+- Git
+- npm / yarn / pnpm / bun
 
-## Deploy on Vercel
+1. Clonar este repositório:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/VncsRaniery/EventSync
+   cd EventSync
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Configurar variáveis de ​ambientes:
+
+   ```bash
+   # NEXTJS URL
+   NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+   # CLERK AUTENTIFICAÇÃO
+   CLERK_SECRET_KEY=
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   WEBHOOK_SECRET=
+
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
+   # STRIPE KEYS
+   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+   STRIPE_SECRET_KEY=
+   STRIPE_WEBHOOK_SECRET=
+
+   # UPLOADTHING KEYS
+   UPLOADTHING_SECRET=
+   UPLOADTHING_APP_ID=
+
+   # DATABASE MONGODB URI
+   MONGODB_URI=
+
+   ```
+
+4. Execute o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Abra seu navegador e navegue até http://localhost:3000 para ver o site em ação.
+
+---
