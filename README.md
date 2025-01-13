@@ -2,7 +2,7 @@
   EventSync - Sistema de Reserva de Eventos
 </h1>
 
-<img width="1280" alt="EventSync Thumbnail" src="/public/assets/EventSync.png">
+<img width="1280" alt="EventSync Thumbnail" src="/public/assets/Banner.png">
 
 ## Introdução
 
